@@ -11,4 +11,4 @@ add three line
 
 我的愚蠢的老板哦!
 
-创建了新的分支dev,并且当前改动都在maste上
+创建了新的分支dev,并且当前改动都在master上
