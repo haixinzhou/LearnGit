@@ -35,3 +35,15 @@ Date:   Tue Apr 2 23:22:01 2019 -0700
 	90e06d9 HEAD@{4}: commit: 把文件加入到仓库中
 	8090184 HEAD@{5}: commit (initial): git仓库初始化
 
+8、如何查看两个版本之间的差异
+	git diff --HEAD filename
+
+9、当我的文件修改了还没有add时，突然想撤销更改！我们可以使用checkout，把更改前的版本更新到工作区。
+
+相当于撤销工作区的修改
+
+	git checkout -- filename
+
+   但是如果我手速很快，我直接给add了，但是还没有commit。可以使用以下命令取消暂存
+
+	git reset HEAD filename
