@@ -14,3 +14,24 @@ git add filename1 ...  filename
 
 
 git commit -m "注释"
+
+4、git status可以随时查看当前仓库是否还有未收版本控制的文件
+
+5、git log (--pretty=oneline) 可以查看版本更新信息
+
+commit 80901844582763191413ce080d53d2a2aed629ad   //版本号,hash算法得到的数值。显示的是当前的版本
+Author: shenjunjie <shenjunjie@ubuntu.com>
+Date:   Tue Apr 2 23:22:01 2019 -0700
+
+6、git reset --hard HEAD^  会退到上一个版本  HEAD^^，上两个版本,HEAD-N,上N个版本
+7、如果后悔了,需要更新到最新版本。有两种方法
+1)、找到最新版本的版本号 0dff8393097edc338e055c41ca9f1ef68af2b75c ，不用全部输完,只需要输入头部几个就行
+2)、git reglog
+	0dff839 (HEAD -> master) HEAD@{0}: reset: moving to 		//这里就是最新版本号	
+	0dff8393097edc338e055c41ca9f1ef68af2b75c
+	ecccf4b HEAD@{1}: reset: moving to HEAD^
+	0dff839 (HEAD -> master) HEAD@{2}: commit: append GPL
+	ecccf4b HEAD@{3}: commit: 初始内容
+	90e06d9 HEAD@{4}: commit: 把文件加入到仓库中
+	8090184 HEAD@{5}: commit (initial): git仓库初始化
+
