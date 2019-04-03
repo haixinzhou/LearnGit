@@ -1,0 +1,27 @@
+一、stash的应用场景
+
+1. master 上面发布的是A的1.0版本
+2、dev 上开发的是A的2.0版本
+3、这时，用户反映 1.0版本存在漏洞，有人利用这个漏洞开外挂
+4.需要从dev切换到master去填这个漏洞，正常必须先提交dev目前的工作，才能切换（必须提交，否则无法切换，只add也不行，因为之前我们说过，checkout会覆盖本地的更改）
+5、而dev的工作还未完成，不想提交，所以先把dev的工作stash一下。然后切换到master
+6、在master建立分支issue101并切换.
+7、在issue101上修复漏洞。
+ 8、修复后，在master上合并issue101
+9、切回dev，恢复原本工作，继续工作。
+
+
+du对应的操作如下
+
+git stash 保存dev的工作现场
+git checkout master
+git checkout -b issue-101
+git add readme.txx
+git commit -m "fixed bug"
+git checkout master
+git merge --on-ff -m "修复了bug并合并分支" issue-101
+git branch -d issue-101
+git stash apply 恢复现场
+git stash drop  删除工作现场内容
+
+上面两句可以合并为 git stash pop
