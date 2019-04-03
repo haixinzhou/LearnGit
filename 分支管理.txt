@@ -1,0 +1,23 @@
+1、如何创建并切换一个分支
+
+git checkout -b dev // 创建并切换到分支dev
+
+相当于
+
+git branch dev
+git checkout dev
+
+2、查看当前分支
+
+git branch
+
+*dev   //×代表当前分支
+ master
+
+3、dev分支上工作完毕后我们可以切换到master分支,
+
+git checkout master
+
+4、切换到master后我们将两条分支上的内容进行合并
+
+git merge dev
