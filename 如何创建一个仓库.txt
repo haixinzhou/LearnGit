@@ -6,3 +6,11 @@
 2、cd LearnGit
    git init
 
+3、创建完仓库后对于需要加入仓库的文件我们执行以下命令
+
+
+git add filename1 ...  filename
+
+
+
+git commit -m "注释"
