@@ -1,0 +1,25 @@
+1、首先是注册github的账户
+
+2、在本地仓库生成ssh公钥和私钥
+	ssh-keygen -t rsa -C "git初始化时候的邮箱"
+在主目录下的.ssh/目录下
+	会得到id_rsa.pub和id_rsa两个文件
+3、登录github，在账户设置里的sshkey中添加新的key。title随便取名，但是key必须是id_rsa.pub里面的内容
+
+4、设置完成后需要创建远程仓库。登录github点击创建仓库就行，创建完成后如下
+
+https://github.com/haixinzhou/C-.git  其中haixinzhou就是账户名,C++就是仓库名
+
+5、创建仓库后在客户端执行git命令将本地的数据推送到远程仓库
+
+git remote add origin git@github.com:haixinzhou/C-.git
+git push -u origin master
+
+加上-u参数不但可以把本地master分支上的内容推送到origin远程仓库,还会把本地的master和远程的master
+分支关联起来，这样以后推送和拉取时就可以简化命令
+
+6、那么如何把别人或者自己的远程库拉取到本地呢
+
+git clone git@github.com:haixinzhou/RemoteGit.git
+
+git clone https://github.com/haixinzhou/C-.git //这种形式也可以,不过https比较慢
