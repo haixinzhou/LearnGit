@@ -27,3 +27,11 @@ git merge dev //合并dev分支到当前master分支
 5、删除分支
 
 git branch -d <name>
+
+二、如何解决分支冲突
+	分支冲突产生的原因:
+	1) 分支featurel对于文件readme.txt进行了修改和commit,指针指向feature
+	2)分支master也对文件readme.txt进行了修改和commit,指针指向master,这样两个分支都对同一个文件进行了修改，合并时可能就会造成不能快速合并，必须我们解决冲突后才可以合并。
+	分支冲突的解决方式
+	1)打开冲突文件，改成我们需要的那种类型，然后提交，最后删除feature
+	分支冲突的查看指令：git log --graph --prety=oneline --abbrev-commit
