@@ -1,0 +1,8 @@
+创建一个git仓库。首先需要创建一个空目录
+
+1、mkdir LearnGit
+然后需要初始化该仓库,初始化后会有.git/目录，该目录不要去修改它
+
+2、cd LearnGit
+   git init
+
