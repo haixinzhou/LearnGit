@@ -1,3 +1,5 @@
+
+一、创建并且合并分支
 1、如何创建并切换一个分支
 
 git checkout -b dev // 创建并切换到分支dev
@@ -20,4 +22,8 @@ git checkout master
 
 4、切换到master后我们将两条分支上的内容进行合并
 
-git merge dev
+git merge dev //合并dev分支到当前master分支
+
+5、删除分支
+
+git branch -d <name>
