@@ -14,5 +14,3 @@ add three line
 <<<<<<< HEAD
 创建了新的分支dev,并且当前改动都在conflict上
 =======
-创建了新的分支dev,并且当前改动都在conflict上
->>>>>>> featurel
