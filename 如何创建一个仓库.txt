@@ -47,3 +47,22 @@ Date:   Tue Apr 2 23:22:01 2019 -0700
    但是如果我手速很快，我直接给add了，但是还没有commit。可以使用以下命令取消暂存
 
 	git reset HEAD filename
+
+10、如果我工作区新增了一个文件test.txt并且commit了,但是我发现这个文件是不应该存在的。
+
+于是我就使用rm删除了工作区的文件，这时候使用git status 会发现提示说我的文件已被删除，如下
+
+位于分支 master
+尚未暂存以备提交的变更：
+  （使用 "git add/rm <文件>..." 更新要提交的内容）
+  （使用 "git checkout -- <文件>..." 丢弃工作区的改动）
+
+	删除：     test.txt
+
+修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
+
+
+如果我们确实需要从版本库删除该文件，需要用到
+	git rm test.txt
+	git commit -m "注释" test.txt
+来完成删除
