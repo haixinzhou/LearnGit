@@ -35,3 +35,10 @@ git branch -d <name>
 	分支冲突的解决方式
 	1)打开冲突文件，改成我们需要的那种类型，然后提交，最后删除feature
 	分支冲突的查看指令：git log --graph --prety=oneline --abbrev-commit
+	合并冲突时使用--no-ff表示禁止使用Fast-Forward,合并时候会自动commit。加入dev提交了一个文件,masters什么也不操作直接合并 git merge --no-ff -m "merge with no-ff" dev，查看日志会显示有一个commit的动作
+
+三、分支策略
+
+1开发原则
+	1)master应该非常稳定，意味着我们不应该在这上面干活，只用来发布版本。干活都在dev上，发布版本时候再合并到master
+
