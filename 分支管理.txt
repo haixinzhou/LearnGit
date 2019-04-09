@@ -42,3 +42,5 @@ git branch -d <name>
 1开发原则
 	1)master应该非常稳定，意味着我们不应该在这上面干活，只用来发布版本。干活都在dev上，发布版本时候再合并到master
 
+2feature分支
+	2)和bug分支一样，开发新功能给时最好新建一个feature分支，然后合并并且删除feature分支。如果要丢弃一个未曾合并的分支(如果临时接到通知该功能不能做了)可以通过git branch -D <name>强行删除
