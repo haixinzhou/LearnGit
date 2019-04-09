@@ -1,0 +1,15 @@
+一、
+1)添加标签
+git tag tagname 默认的是HEAD版本
+git tag commit_id tagname 指定版本
+git tag -a<tagname> -m "comment"
+2)查看标签
+git tag
+git show tagname
+3)删除标签
+git tag -d tagname
+git push origin :refs/tag/tagname 删除远程标签之前先删除本地标签
+4)推送标签
+命令git push origin <tagname>可以推送一个本地标签；
+命令git push origin --tags可以推送全部未推送过的本地标签；
+
