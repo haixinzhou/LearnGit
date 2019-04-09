@@ -44,3 +44,9 @@ git branch -d <name>
 
 2feature分支
 	2)和bug分支一样，开发新功能给时最好新建一个feature分支，然后合并并且删除feature分支。如果要丢弃一个未曾合并的分支(如果临时接到通知该功能不能做了)可以通过git branch -D <name>强行删除
+3 多人协作工作模式
+	1)首先试图 git push origin <branch-name>推送自己的修改
+	2)推送失败是因为远程分支版本更新,需要先git pull试图合并
+	3)合并有冲突则解决冲突并在本地提交
+	4)解决掉冲突后再用git push origin <branch-name>推送就可以成功
+	5)如果git pull 提示no tracking information则说明本地和远程分支没有关联起来，使用git branch --set-upstream-to <branch-name> origin/<branch-name>
